@@ -56,7 +56,7 @@ jobs:
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: android/app/build/outputs/apk/release
-          signingKeyBase64: android/oware.text
+          signingKeyBase64: android/oware.txt
           alias: oware
           keyStorePassword: Q1w2e3@@
           keyPassword: Q1w2e3@@
@@ -67,7 +67,7 @@ jobs:
         uses: r0adkll/sign-android-release@v1
         with:
          releaseDirectory: android/app/build/outputs/apk/release
-         signingKeyBase64: android/oware.text
+         signingKeyBase64: android/oware.txt
          alias: oware
          keyStorePassword: Q1w2e3@@
          keyPassword: Q1w2e3@@
