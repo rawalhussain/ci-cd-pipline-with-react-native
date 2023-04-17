@@ -56,10 +56,21 @@ jobs:
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: android/app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-          alias: ${{ secrets.ANDROID_ALIAS }}
-          keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          signingKeyBase64: android/oware.text
+          alias: oware
+          keyStorePassword: Q1w2e3@@
+          keyPassword: Q1w2e3@@
+
+      ## sign generated apk
+      - name: Sign AAB
+        id: sign_abb
+        uses: r0adkll/sign-android-release@v1
+        with:
+         releaseDirectory: android/app/build/outputs/apk/release
+         signingKeyBase64: android/oware.text
+         alias: oware
+         keyStorePassword: Q1w2e3@@
+         keyPassword: Q1w2e3@@
 
       ## Distribute app to Firebase App Distribution for testing / use google play internal track if you have a google play account
       - name: upload artifact to Firebase App Distribution
